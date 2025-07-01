@@ -1,0 +1,24 @@
+[package]
+name = "my_arch_token"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+# Core Arch Network dependencies
+arch_sdk = "0.5.2"
+arch_program = "0.5.2"
+arch_test_sdk = "0.5.2"
+
+# APL Token Programs
+apl-token = { version = "0.5.2", features = ["no-entrypoint"] }
+
+# Serialization and utilities
+borsh = { version = "1.5.1", features = ["derive"] }
+bitcoincore-rpc = "0.18.0"
+bitcoin = { version = "0.32.3", features = ["serde", "rand"] }
+hex = "0.4.3"
+log = "0.4"
+env_logger = "0.10"
+
+[dev-dependencies]
+serial_test = "3.1.1"
